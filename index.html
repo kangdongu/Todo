@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumYeBbeunMinGyeongCe.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+   
+</head>
+<body>
+    <div class="toggle_button">
+        <img src="./img/toggle1.png" alt="">
+    </div>
+    <form class="hidden" id="login-form">
+        <input class="name_input" required maxlength="4" type="text" placeholder="이름을 알려주세요">
+        <input class="login_button" type="submit" value="Log in">
+    </form>
+    <div id="background" class="hidden"></div>
+    <div class="hidden" id="wrap">
+        <section class="left_section">
+            <h2 id="clock">00:00:00</h2>
+            <h1 id="greeting" class="hidden"></h1>
+        </section>
+        <section class="middle_section">
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="memo_box">
+                <input type="text" class="memo_input">
+                <button class="memo_button">입력</button>
+                <ul id="memo_list">
+
+                </ul>
+            </div>
+        </section>
+        <section class="right_section">
+            <table class="Calendar">
+                <thead>
+                    <tr>
+                        <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
+                        <td colspan="5">
+                            <span id="calYear"></span>
+                            <span id="calMonth"></span>
+                        </td>
+                        <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
+                    </tr>
+                    <tr>
+                        <td>일</td>
+                        <td>월</td>
+                        <td>화</td>
+                        <td>수</td>
+                        <td>목</td>
+                        <td>금</td>
+                        <td>토</td>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                </tbody>
+            </table>
+            <div id="todos_list_box">
+                <h2 id="todo_list_month_day">
+                    <span id="todos_month"></span> /
+                    <span id="todos_day"></span>
+                </h2>
+                    <form id="todo_form" action="" >
+                        <input type="text" placeholder="할일을 적어 주세요">
+                    </form>
+                    <ul>
+                        <h3>Today todolist</h3>
+        
+                    </ul>
+            </div>
+        </section>
+        <section class="quote_section">
+            <div id="quote">
+                <span></span>
+            </div>
+        </section>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/calender.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/memo.js"></script>
+    <script src="./js/toggle.js"></script>
+</body>
+</html>
